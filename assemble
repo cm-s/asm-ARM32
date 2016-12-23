@@ -1,0 +1,4 @@
+base=$(echo $1 | cut -d '.' -f 1)
+as -o $base'.o' $base'.s'
+ld -o $base.run $base'.o'
+rm $base'.o'
